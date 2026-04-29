@@ -33,5 +33,38 @@ Because the underlying codebase is part of a much larger research pipeline---inv
 
 The data files provided here are the cleaned, analysis‑ready outputs used directly in Power BI.
 
-If you’re curious about the methodology, feel free to reach out.
+If you’re curious about the methodology, feel free to reach out. However, here I would like to cite the datasources:
+## FOMC Speeches (1986–2025)
+- Core dataset extends Campiglio, E., Deyris, J., Romelli, D., & Scalisi, G. (2025), which covers FOMC member speeches from Jan 1986–Dec 2023.
+- Updated through web scraping of: (1) Federal Reserve Board website, (2) All 12 Federal Reserve Bank websites
+- Additional archival material for missing years (e.g., William Poole, 1998–2008) obtained from the FRASER digital archive.
+- Only publicly available speeches are included.
+- Video transcripts (e.g., YouTube‑based materials) are excluded to maintain consistency with Campiglio’s original dataset
 
+## Speaker Background Information
+Biographical and career information for FOMC members compiled from:
+- Federal Reserve Board and regional bank official biographies
+- Conti‑Brown & Nygaard Federal Reserve Bank Boards of Directors Biographical Database
+- Background dataset from Riboni, A., & Ruge‑Murcia, F. (2025)
+Variables include: gender, race, degree major, terminal degree, pre‑Fed career, institutional role, saltwater/freshwater classification, age, and tenure
+
+## Daily Financial Market Data
+- Daily equity and Treasury market variables obtained via the Yahoo Finance API.
+- Used to construct volatility, return, and volume‑based measures aligned with speech dates
+
+## Intraday Financial Market Data (2010–2023)
+- High‑frequency (15‑minute) price and volume data sourced from the Bloomberg Terminal.
+- Intraday sample restricted to regular U.S. trading hours (09:00–16:30 ET).
+- Speech timestamps sourced from the FRASER FOMC Speak Archive (2010–2023)
+
+## Macroeconomic Data
+Public macroeconomic indicators retrieved from:
+- FRED (Federal Reserve Economic Data)
+- ALFRED (archival vintages)
+- Additional real‑time macroeconomic conditions taken from the Greenbook/Tealbook (where publicly accessible)
+
+
+# References (for Data Sources)
+Campiglio, E., Deyris, J., Romelli, D., & Scalisi, G. (2025). Warning words in a warming world: Central bank communication and climate change. European Economic Review, 178, 105101. https://doi.org/10.1016/j.euroecorev.2025.105101
+
+Riboni, A., & Ruge‑Murcia, F. (2025). Membership Turnover and Policy Disagreement at the FOMC. HAL Working Paper hal‑05229751. https://ideas.repec.org/p/hal/wpaper/hal-05229751.html
